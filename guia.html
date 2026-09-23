@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Página web de ejemplo" />
+    <meta name="author" content="Juan" />
+
+    <title>Guía de HTML</title>
+
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+
+       <!-- SCRIPTS -->
+    <script src="js/componentes.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- CONTENIDO -->
+    <main>
+      <h1>Hola mundo!</h1>
+      <h2>es mi primera web</h2>
+
+      <!-- Títulos -->
+      <h1>1.Título principal (h1)</h1>
+      <h2>1.1 Título secundario (h2)</h2>
+      <h3>1.2 Otro título (h3)</h3>
+      <h4>1.3 Ejemplo de subtítulo h4</h4>
+
+      <!-- Texto -->
+      <h2>2. Párrafos de ejemplo.</h2>
+      <p>2.1 Ejemplo de párrafo</p>
+      <p>2.2 Texto en <strong>negrita</strong></p>
+      <p>2.3 Texto en <em>cursiva</em></p>
+      <p>2.4 Texto <u>subrayado</u></p>
+      <p>2.5 Texto <mark>resaltado</mark>.</p>
+
+      <section>
+        <h2>3. Lista multinivel</h2>
+        <p>
+          A continuación, una lista con diferentes niveles y estilos de viñetas:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Hardware</strong>
+            <ul>
+              <li>
+                Dispositivos de entrada
+                <ol type="a">
+                  <li>Teclado</li>
+                  <li>Ratón</li>
+                </ol>
+              </li>
+              <li>
+                Dispositivos de salida
+                <ol type="a">
+                  <li>Monitor</li>
+                  <li>Impresora</li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Software</strong>
+            <ul>
+              <li>Sistema operativo</li>
+              <li>Programas de aplicación</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <h2>4.Ejemplo de enlace:</h2>
+
+      <p>
+        Visita la web de:
+        <a href="https://educacion.castillalamancha.es/">EducamosCLM</a>.
+      </p>
+
+      <h2>5.Ejemplo de tabla:</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Encabezado 1</th>
+            <th>Encabezado 2</th>
+            <th>Encabezado 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <td>Dato 3</td>
+          </tr>
+          <tr>
+            <td>Dato 4</td>
+            <td>Dato 5</td>
+            <td>Dato 6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>6.Lista de definiciones:</h2>
+      <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado para páginas web.</dd>
+
+        <dt>CSS</dt>
+        <dd>Lenguaje utilizado para definir estilos.</dd>
+      </dl>
+
+      <h2>7. Summary un elemento muy vistoso.</h2>
+      <details>
+        <summary>Ejemplo de summary:</summary>
+        <p>
+          HTML es un lenguaje de marcado utilizado para estructurar páginas web.
+        </p>
+      </details>
+
+      <h2>8.Imagen de ejemplo 1</h2>
+      <img src="img/imagen_ejemplo.webp" />
+
+      <h2>9.Imagen de ejemplo 2</h2>
+      <figure>
+        <img src="img/gato_imagen.jpg" alt="Gato" />
+        <figcaption>Gato programando en HTML.</figcaption>
+      </figure>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+  </body>
+</html>

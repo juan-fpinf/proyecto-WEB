@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Página web de ejemplo" />
+    <meta name="author" content="Juan" />
+    
+    <title>Calculadora</title>
+
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/estilos.css" />
+
+       <!-- SCRIPTS -->
+    <script src="js/componentes.js" defer></script>
+  </head>
+
+  <body>
+    <!-- CONTENIDO -->
+    <main>
+      <!-- Contenedor principal de la calculadora -->
+      <table border="1">
+        <!-- Pantalla -->
+        <!-- Primera fila -->
+        <tr>
+          <td colspan="4">
+            <input type="text" id="pantalla" value="0" readonly />
+          </td>
+        </tr>
+
+        <!-- Segunda fila -->
+        <tr>
+          <td><button onclick="escribir('7')">7</button></td>
+          <td><button onclick="escribir('8')">8</button></td>
+          <td><button onclick="escribir('9')">9</button></td>
+          <td><button onclick="escribir('/')">÷</button></td>
+        </tr>
+
+        <!-- Tercera fila -->
+        <tr>
+          <td><button onclick="escribir('4')">4</button></td>
+          <td><button onclick="escribir('5')">5</button></td>
+          <td><button onclick="escribir('6')">6</button></td>
+          <td><button onclick="escribir('*')">×</button></td>
+        </tr>
+
+        <!-- Cuarta fila -->
+        <tr>
+          <td><button onclick="escribir('1')">1</button></td>
+          <td><button onclick="escribir('2')">2</button></td>
+          <td><button onclick="escribir('3')">3</button></td>
+          <td><button onclick="escribir('-')">−</button></td>
+        </tr>
+
+        <!-- Quinta fila -->
+        <tr>
+          <td rowspan="2"><button onclick="borrar()">C</button></td>
+          <td><button onclick="escribir('0')">0</button></td>
+          <td><button onclick="escribir('.')">.</button></td>
+          <td><button onclick="escribir('+')">+</button></td>
+        </tr>
+
+        <!-- Sexta fila -->
+        <tr>
+          <td></td>
+          <td colspan="2"><button onclick="calcular()">=</button></td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
