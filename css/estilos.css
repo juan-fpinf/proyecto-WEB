@@ -19,10 +19,14 @@ body {
   margin: 0;
   color: var(--text);
   font-family: Arial, sans-serif;
-  background: url("../img/fondo.jpg") repeat;
+  background: url("../img/fondo2.jpg") repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
+  flex: 1;
   max-width: 1100px;
   margin: 40px auto;
   padding: 30px 35px;
