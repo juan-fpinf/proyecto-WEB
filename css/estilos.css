@@ -19,7 +19,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #edf6ff, #f8fafc);
+  background: url("../img/fondo.jpg") repeat;
 }
 
 main {
