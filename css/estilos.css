@@ -19,7 +19,7 @@ body {
   margin: 0;
   color: var(--text);
   font-family: Arial, sans-serif;
-  background: url("../img/fondo2.jpg") repeat;
+  background: url("../img/fondo_mosaico_geométrico.jpg") repeat;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
