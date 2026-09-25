@@ -1,4 +1,3 @@
-
 // --------------------------------------------------
 // CARGAR EL HEADER
 // --------------------------------------------------
@@ -25,8 +24,6 @@ fetch("componentes/header.html")
         // el contenido que hemos obtenido de header.html.
         document.getElementById("header").innerHTML = datos;
     });
-
-
 // --------------------------------------------------
 // CARGAR EL FOOTER
 // --------------------------------------------------
