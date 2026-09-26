@@ -132,8 +132,8 @@ header h2 {
   background: var(--primary);
 }
 
-:is(nav, .menu) > a,
-.desplegable > a {
+:is(nav, .menu)>a,
+.desplegable>a {
   padding: 10px 16px;
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
@@ -141,8 +141,8 @@ header h2 {
   transition: background 0.2s ease;
 }
 
-:is(nav, .menu) > a:hover,
-.desplegable > a:hover {
+:is(nav, .menu)>a:hover,
+.desplegable>a:hover {
   background: rgba(255, 255, 255, 0.18);
   text-decoration: none;
 }
@@ -210,9 +210,14 @@ tbody tr:nth-child(even) {
   background: #fef2f2;
 }
 
-:is(.llmm, .recreo td) {
+:is(.recreo td) {
   color: #92400e;
   background: #fef3c7;
+}
+
+.llmm {
+  color: #000000;
+  background: #fbff00;
 }
 
 .par {
