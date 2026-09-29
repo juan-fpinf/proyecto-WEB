@@ -1,47 +1,27 @@
-// --------------------------------------------------
-// CARGAR EL HEADER
-// --------------------------------------------------
+const raizProyecto = new URL("../", document.currentScript.src);
 
-// fetch() permite solicitar un archivo al servidor.
-// En este caso, solicitamos el archivo:
-// componentes/header.html
-fetch("componentes/header.html")
+async function cargarComponente(archivo, id) {
+  const contenedor = document.getElementById(id);
+  if (!contenedor) return;
 
-    // Cuando se recibe el archivo, se ejecuta este .then().
-    // "respuesta" contiene la respuesta que nos ha enviado
-    // el servidor.
-    .then(respuesta => respuesta.text())
+  const respuesta = await fetch(new URL(archivo, raizProyecto));
+  if (!respuesta.ok) {
+    throw new Error(`No se pudo cargar ${archivo}: ${respuesta.status}`);
+  }
 
-    // .text() convierte el contenido recibido en texto.
-    // "datos" contiene ahora todo el código HTML
-    // que había dentro de header.html.
-    .then(datos => {
+  contenedor.innerHTML = await respuesta.text();
 
-        // Buscamos en nuestra página el elemento que tiene:
-        // id="header"
-        //
-        // Después, introducimos dentro de ese elemento
-        // el contenido que hemos obtenido de header.html.
-        document.getElementById("header").innerHTML = datos;
+  if (id === "header") {
+    contenedor.querySelectorAll("a[href]").forEach(enlace => {
+      const href = enlace.getAttribute("href");
+      if (href && !href.startsWith("#")) {
+        enlace.href = new URL(href, raizProyecto).href;
+      }
     });
-// --------------------------------------------------
-// CARGAR EL FOOTER
-// --------------------------------------------------
+  }
+}
 
-// Volvemos a utilizar fetch(), esta vez para solicitar
-// el archivo componentes/footer.html.
-fetch("componentes/footer.html")
-
-    // Cuando recibimos el archivo, obtenemos su contenido.
-    .then(respuesta => respuesta.text())
-
-    // "datos" contiene el código HTML de footer.html.
-    .then(datos => {
-
-        // Buscamos el elemento que tiene:
-        // id="footer"
-        //
-        // Y dentro de él introducimos el contenido
-        // del archivo footer.html.
-        document.getElementById("footer").innerHTML = datos;
-    });
+Promise.all([
+  cargarComponente("header.html", "header"),
+  cargarComponente("footer.html", "footer"),
+]).catch(console.error);

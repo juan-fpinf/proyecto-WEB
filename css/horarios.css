@@ -1,0 +1,34 @@
+ :is(.fdh, .prog, .ent) {
+	color: #991b1b;
+	background: #fef2f2;
+}
+
+.recreo td {
+	color: #92400e;
+	background: #fef3c7;
+}
+
+.llmm {
+	color: #000000;
+	background: #fbff00;
+}
+
+.par {
+	color: #996d1b;
+	background: #fef2f2;
+}
+
+:is(.iso, .bbdd) {
+	color: #166534;
+	background: #f0fdf4;
+}
+
+.sist {
+	color: #0f766e;
+	background: #ecfeff;
+}
+
+:is(.ipe, .ing, .digi, .sost, .proy) {
+	color: #5b21b6;
+	background: #f5f3ff;
+}

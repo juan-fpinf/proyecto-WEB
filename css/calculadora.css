@@ -1,0 +1,45 @@
+main > table {
+	display: table;
+	width: min(100%, 360px);
+	margin: 0 auto;
+	overflow: visible;
+	table-layout: fixed;
+}
+
+main > table td {
+	width: 25%;
+	height: 64px;
+	padding: 6px;
+	background: var(--surface);
+}
+
+#pantalla {
+	width: 100%;
+	min-height: 56px;
+	padding: 10px 12px;
+	color: var(--text);
+	font: inherit;
+	font-size: 1.5rem;
+	text-align: right;
+	border: 1px solid #b8c4d6;
+	border-radius: 8px;
+	background: #f8fafc;
+}
+
+main > table button {
+	width: 100%;
+	min-height: 52px;
+	padding: 10px;
+	color: #fff;
+	font: inherit;
+	font-weight: bold;
+	border: 1px solid var(--primary-soft);
+	border-radius: 8px;
+	background: var(--primary-soft);
+	cursor: pointer;
+}
+
+main > table button:hover {
+	border-color: var(--primary);
+	background: var(--primary);
+}
